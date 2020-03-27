@@ -1,0 +1,193 @@
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:visited {
+  color: white;
+}
+
+#container {
+  background-color: #56bdcb;
+}
+
+#navigation {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #56bdcb;
+}
+
+#listNavigation {
+  position: absolute; /*or fixed*/
+  right: 0px;
+}
+
+#maintitle {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  margin-top: 20%;
+  font-size: 100px;
+}
+
+#carousel {
+  z-index: 0;
+}
+
+#pagecards {
+  width: 80%;
+}
+
+.card {
+  border: none;
+}
+
+#pagecards {
+  margin: auto;
+}
+
+#feedbacksection {
+  background-image: url(images/FBBackground.jpg);
+}
+
+#contactform {
+  width: 100%;
+  background-color: white;
+}
+
+#footer {
+  width: 100%;
+  background-color: #56bdcb;
+}
+
+.feedback, .feedback-form-title {
+  font-size: 2rem;
+}
+
+.feedback-form {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+
+.feedback-title {
+  font-size: 1.2em;
+}
+
+.feedback-form-title {
+  font-size: 2em;
+}
+
+.feedback-name {
+  font-size: .6em;
+  font-weight: 100;
+}
+
+.feedback-message {
+  font-weight: 100;
+  font-size: .9em;
+  line-height: 120%;
+  margin-top: 5px;
+}
+
+.feedback-item {
+  border-bottom: 1px solid gray;
+  padding: 8px 0;
+}
+
+.feedback-item:last-of-type {
+  border-bottom: none;
+}
+
+input[type="text"], textarea {
+    background-color: #98c9f1;
+}
+
+textarea {
+  background-color: #98c9f1 !important;
+}
+
+#pagetitle {
+  color: #e2c662;
+  font-size: 4em;
+}
+
+.imagehover:hover .image {
+  opacity: 0.3;
+}
+
+#imagery .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 15%; /* IE10 */
+  flex: 15%;
+  max-width: 25%;
+  padding: 0 17px;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.image {
+  padding-bottom: 1em;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+}
+
+.dropdown-menu {
+background: transparent !important;
+border: 0 !important;
+}
+
+#errorbody {
+background-color: #56bdcb;
+}
+
+#errorinfo {
+position: absolute;
+margin-top: 20%;
+}
+
+#errorinfo h1 {
+font-size: 10vw;
+}
+
+#infosentence p a {
+text-decoration: underline;
+}
