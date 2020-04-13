@@ -1,0 +1,51 @@
+      <!--Start of feedback section-->
+      <div id="feedbacksection">
+        <div class="container py-5" id="feedback">
+            <div class="row">
+                <div class="col-sm-4 bg-white rounded p-2">
+                    <h1 class="feedback-form-title text-center">Write a Review!</h1>
+                    <form class="feedback-form needs-validated" method="POST" action="/feedback">
+                        <div class="form-group">
+                            <label for="feedback-form-name">Name</label>
+                            <input type="text" class="form-control" name="name" id="feedback-form-name" placeholder="Enter your name" required>
+                           
+                
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-form-title">Title</label>
+                            <input type="text" class="form-control" name="title" id="feedback-form-title" placeholder="Title of your feedback" required>
+                           
+                          
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-form-message">Message</label>
+                            <textarea placeholder="Enter your message, then hit the submit" class="form-control" name="message" id="feedback-form-message" rows="12" required></textarea>
+            
+                           
+                        </div>
+                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    </form>
+                </div>
+                <!-- primary -->
+                <aside class="col-sm-8">
+                    <div class="maincontent feedback">
+                        <div class="feedback-messages">
+                            <%feedback.forEach(function(item) {%>
+                            <div class="feedback-item item-list media-list">
+                                <div class="feedback-item media">
+                                    <div class="feedback-info media-body bg-white rounded p-3">
+                                        <div class="feedback-head">
+                                            <div class="feedback-title"><%=item.title%><small class="feedback-name label label-info"><%=item.name%></small></div>
+                                        </div>
+                                        <div class="feedback-message"><%=item.message%></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%})%>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <!--End of Feedback section-->

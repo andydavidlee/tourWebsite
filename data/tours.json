@@ -1,0 +1,40 @@
+{
+    "tours": [{
+        "title": "GRAFFITI ART",
+        "shortname": "grafitti_art",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non odio bibendum, porttitor lectus et, lacinia elit. Sed id risus erat. Fusce congue nibh vitae odio elementum, et rutrum quam facilisis. Maecenas cursus sollicitudin ante vel auctor. Sed non blandit ex, eu ultricies nibh. Mauris purus nisi, cursus vitae iaculis ut, malesuada et quam. Cras elementum diam eget felis ornare, id dignissim quam varius. Nulla vitae diam quis dui pulvinar aliquet quis ac nisl.</p><p>Duis vestibulum volutpat massa ut placerat. Vivamus blandit gravida fermentum. Mauris elementum condimentum ante, vel vehicula velit bibendum congue. Morbi porttitor tellus ut tortor auctor sollicitudin. Quisque auctor sit amet quam a volutpat. Curabitur euismod justo vel arcu volutpat tempus. Donec molestie commodo augue, id tincidunt ante vulputate a. Fusce condimentum tincidunt elit, nec fermentum mi facilisis a. Suspendisse ligula dui, facilisis non commodo et, suscipit quis ante. Fusce cursus sodales vestibulum. Sed a lacinia dui. Sed sed nunc nunc. Phasellus id porta augue. Sed pharetra blandit nulla, non rhoncus augue. Integer ut diam sodales, consectetur massa at, consequat velit.</p>",
+        "thumbnails": ["StreetArtThumb01.jpg", "StreetArtThumb02.jpg", "StreetArtThumb03.jpg", "StreetArtThumb04.jpg"],
+        "screenshots": ["graffiti01.jpg", "graffiti02.jpg", "graffiti03.jpg", "graffiti04.jpg"],
+        "card": ["StreetArtCard.jpg"],
+        "banner":["grafittiartbanner.jpg"]
+},{
+   "title":"PARKLANDS",
+   "shortname": "parklands",
+   "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+   "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non odio bibendum, porttitor lectus et, lacinia elit. Sed id risus erat. Fusce congue nibh vitae odio elementum, et rutrum quam facilisis. Maecenas cursus sollicitudin ante vel auctor. Sed non blandit ex, eu ultricies nibh. Mauris purus nisi, cursus vitae iaculis ut, malesuada et quam. Cras elementum diam eget felis ornare, id dignissim quam varius. Nulla vitae diam quis dui pulvinar aliquet quis ac nisl.</p><p>Duis vestibulum volutpat massa ut placerat. Vivamus blandit gravida fermentum. Mauris elementum condimentum ante, vel vehicula velit bibendum congue. Morbi porttitor tellus ut tortor auctor sollicitudin. Quisque auctor sit amet quam a volutpat. Curabitur euismod justo vel arcu volutpat tempus. Donec molestie commodo augue, id tincidunt ante vulputate a. Fusce condimentum tincidunt elit, nec fermentum mi facilisis a. Suspendisse ligula dui, facilisis non commodo et, suscipit quis ante. Fusce cursus sodales vestibulum. Sed a lacinia dui. Sed sed nunc nunc. Phasellus id porta augue. Sed pharetra blandit nulla, non rhoncus augue. Integer ut diam sodales, consectetur massa at, consequat velit.</p>",
+   "thumbnails": ["ParkThumb01.jpg", "ParkThumb02.jpg", "ParkThumb03.jpg", "ParkThumb04.jpg"], 
+   "screenshots": ["parks01.jpg", "parks02.jpg", "parks03.jpg", "parks04.jpg"],
+   "card": ["FlindersCard.jpg"],
+   "banner":["ParkBanner.jpg"]
+},{
+    "title":"NGV",
+    "shortname": "ngv",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non odio bibendum, porttitor lectus et, lacinia elit. Sed id risus erat. Fusce congue nibh vitae odio elementum, et rutrum quam facilisis. Maecenas cursus sollicitudin ante vel auctor. Sed non blandit ex, eu ultricies nibh. Mauris purus nisi, cursus vitae iaculis ut, malesuada et quam. Cras elementum diam eget felis ornare, id dignissim quam varius. Nulla vitae diam quis dui pulvinar aliquet quis ac nisl.</p><p>Duis vestibulum volutpat massa ut placerat. Vivamus blandit gravida fermentum. Mauris elementum condimentum ante, vel vehicula velit bibendum congue. Morbi porttitor tellus ut tortor auctor sollicitudin. Quisque auctor sit amet quam a volutpat. Curabitur euismod justo vel arcu volutpat tempus. Donec molestie commodo augue, id tincidunt ante vulputate a. Fusce condimentum tincidunt elit, nec fermentum mi facilisis a. Suspendisse ligula dui, facilisis non commodo et, suscipit quis ante. Fusce cursus sodales vestibulum. Sed a lacinia dui. Sed sed nunc nunc. Phasellus id porta augue. Sed pharetra blandit nulla, non rhoncus augue. Integer ut diam sodales, consectetur massa at, consequat velit.</p>",
+    "thumbnails": ["NGVThumb01.jpg", "NGVThumb02.jpg", "NGVThumb03.jpg", "NGVThumb04.jpg"],
+    "screenshots": ["ngv01.jpg", "ngv02.jpg", "ngv03.jpg", "ngv04.jpg"],
+    "card": ["NGVCard.jpg"],
+    "banner":["NGVBanner.jpg"]
+ },{
+    "title":"FLINDERS STREET",
+    "shortname": "flinders_street",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non odio bibendum, porttitor lectus et, lacinia elit. Sed id risus erat. Fusce congue nibh vitae odio elementum, et rutrum quam facilisis. Maecenas cursus sollicitudin ante vel auctor. Sed non blandit ex, eu ultricies nibh. Mauris purus nisi, cursus vitae iaculis ut, malesuada et quam. Cras elementum diam eget felis ornare, id dignissim quam varius. Nulla vitae diam quis dui pulvinar aliquet quis ac nisl.</p><p> Duis vestibulum volutpat massa ut placerat. Vivamus blandit gravida fermentum. Mauris elementum condimentum ante, vel vehicula velit bibendum congue. Morbi porttitor tellus ut tortor auctor sollicitudin. Quisque auctor sit amet quam a volutpat. Curabitur euismod justo vel arcu volutpat tempus. Donec molestie commodo augue, id tincidunt ante vulputate a. Fusce condimentum tincidunt elit, nec fermentum mi facilisis a. Suspendisse ligula dui, facilisis non commodo et, suscipit quis ante. Fusce cursus sodales vestibulum. Sed a lacinia dui. Sed sed nunc nunc. Phasellus id porta augue. Sed pharetra blandit nulla, non rhoncus augue. Integer ut diam sodales, consectetur massa at, consequat velit.</p>",
+    "thumbnails": ["FlindersThumb01.jpg", "FlindersThumb02.jpg", "FlindersThumb03.jpg", "FlindersThumb04.jpg"], 
+    "screenshots": ["flinders01.jpg", "flinders02.jpg", "flinders03.jpg", "flinders04.jpg"],
+    "card": ["FlindersCard.jpg"],
+    "banner":["FlindersBanner.jpg"]
+ }
+]}
+ 

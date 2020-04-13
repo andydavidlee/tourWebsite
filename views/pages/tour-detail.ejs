@@ -1,0 +1,40 @@
+
+
+        <main>
+            <!--Page banner-->
+            <div>
+                <img class="img-fluid" src="../images/<%-tour.banner%>" alt="grafitti art banner" style="width: 2560px;">
+            </div>
+            <div class="bg-white">
+                <div class="row">
+                    <section class="col-md-10">
+                        <h1 id="pagetitle" class="text-center text-md-right mr-md-3"><%=tour.title%></h1>
+                    </section>
+                </div>
+                <div class="row">
+                    <div class="col-10 col-md-8 offset-md-2 offset-1">
+                       <%-tour.description%>
+                    </div>
+                </div>
+            </div>
+            <!--End of info section-->
+            <!--beginning of lightbox-->
+            <div class="row bg-white">
+                <div class="col-10 offset-1">
+                    <div id="imagery">
+                        <div class="row py-1 mx-auto">
+                        <%thumbnails.forEach(function(item) {%>
+                            <div class="column">
+                                <div class="imagehover">
+                                    <a href="../images/<%-item%>" data-lightbox="gallery"><img src="../images/<%-item%>" class="image" alt="image" style="width:100%"></a>
+                                </div>
+                            </div>
+                        <%})%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--End of lightbox gallery-->
+        </main>
+   

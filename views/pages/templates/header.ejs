@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title><%= siteName %> | <%= pageTitle %></title>
+</head>
+
+<body>
+    <div id="container" class="container-fluid px-0">
+        <header>
+
+            <!--Navigation Menu-->
+            <div id="navigation">
+                <nav class="navbar navbar-expand-md">
+
+                    <!--Navigation Brand/Logo-->
+                    <div id="navtitle" class="navbar-brand">
+                        <a href="/" class="text-white ml-1"><%= siteName %></a>
+                    </div>
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class=" navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#listNavigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Site navigation menu -->
+                    <div class="collapse navbar-collapse float-right" id="listNavigation">
+                        <ul class="navbar nav mt-5 pt-5 mt-md-0 pt-md-0">
+                            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Tours
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    <%tourNames.forEach(function(tour){%>
+                                        <a class="dropdown-item" href="tours/<%=tour.shortname%>"><%=tour.title%></a>
+                                    <%})%>
+
+                                </div>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#feedbacksection">Reviews</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contactform">Contact</a></li>
+                        </ul>
+                        </div>
+                    </nav>
+            </div>
+        </header>
