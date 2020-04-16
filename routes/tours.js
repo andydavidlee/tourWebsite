@@ -7,12 +7,6 @@ module.exports = (params) => {
 
     const {tourService} = params;
 
-    // router.get('/', async (req, response) => {
-        // const tours = await tourService.getList();
-        // response.render('/pages', { pageTitle: 'Tours', template: 'tours', tours });
-    // return response.json(tours);
-// });
-
 router.get('/:shortname', async(request, response, next) => {
     try {
         const tour = await tourService.getTour(request.params.shortname);

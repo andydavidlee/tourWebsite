@@ -6,9 +6,12 @@ const bodyParser = require('body-parser');
 
 const FeedbackService = require('./services/feedbackservice');
 const TourService = require('./services/tourservices');
+const ContactService = require('./services/contactservice');
+
 
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
+const contactService = new ContactService('./data/contact.json');
 
 const routes = require('./routes');
 
@@ -39,6 +42,7 @@ app.use(async (request, response, next) => {
 app.use('/', routes({
     feedbackService,
     tourService,
+    contactService,
 }));
 
 // app.use((request, response, next) => {

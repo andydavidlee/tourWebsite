@@ -63,25 +63,25 @@
                         <img class="d-none d-md-block" src="images/ContactImage.jpg" alt="Melbourne tram">
                     </div>
                     <div class="col-10 col-md-4 offset-1 pt-5">
-                        <form name="contactform" method="post" action="contact.php">
+                        <form name="contactform" method="post" action="/contact">
                             <div class="form-group row">
-                                <label for="first_name" class="col-md-3">First Name: </label>
-                                <input type="text" id="first_name" maxlength="50" class="form-control col-md-9" placeholder="eg. John" size="30">
+                                <label for="firstName" class="col-md-3">First Name: </label>
+                                <input type="text" id="firstName" maxlength="50" class="form-control col-md-9" placeholder="eg. John" size="30" required>
                             </div>
 
                             <div class="form-group row">
-                                <label for="last_name" class="col-md-3">Last Name: </label>
-                                <input type="text" id="last_name" maxlength="50" size="30" class="form-control col-md-9" placeholder="eg. Doe">
+                                <label for="lastName" class="col-md-3">Last Name: </label>
+                                <input type="text" id="lastName" maxlength="50" size="30" class="form-control col-md-9" placeholder="eg. Doe" required>
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-3">Email: </label>
-                                <input type="text" id="email" maxlength="80" size="30" class="form-control col-md-9" placeholder="name@example.com">
+                                <label for="fbEmail" class="col-md-3">Email: </label>
+                                <input type="text" id="fbEmail" maxlength="80" size="30" class="form-control col-md-9" placeholder="name@example.com" required>
                             </div>
 
                             <div class="form-group row">
-                                <label for="comments" class="col-md-3">Query: </label>
-                                <textarea id="comments" maxlength="1000" class="form-control col-md-9" rows="4"></textarea>
+                                <label for="FbComments" class="col-md-3">Query: </label>
+                                <textarea id="fbComments" maxlength="1000" class="form-control col-md-9" rows="4" required></textarea>
                             </div>
 
                             <div class="form-group row">
