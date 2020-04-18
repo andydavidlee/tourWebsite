@@ -14,7 +14,7 @@ module.exports = params => {
 
     router.get('/', async(request, response, next) => {
         try  {
-            const topTours = await tourService.getList();
+            const topTours = await tourService.getTopTours();
             const feedback = await feedbackService.getList();
             return response.render('layout', { pageTitle: 'Welcome', template: 'index', topTours, feedback });
         } catch(err) {

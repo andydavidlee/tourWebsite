@@ -71,6 +71,19 @@ class TourService {
       };
     });
   }
+  async getTopTours() {
+    const data = await this.getData();
+    let topTours = data.map(tour => {
+      return {
+        title: tour.title,
+        shortname: tour.shortname,
+        summary: tour.summary,
+        card: tour.card
+      };
+    });
+    return topTours.slice(0, 3);
+  }
+
 
   /**
    * Fetches speakers data from the JSON file provided to the constructor

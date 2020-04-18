@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/mystyle.css" />
-    <link rel="stylesheet" href="./css/colourChange.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css"
@@ -63,7 +62,7 @@
                     <%tourNames.forEach(function(tour){%>
                     <a
                       class="dropdown-item"
-                      href="tours/<%=tour.shortname%>"
+                      href="/tours/<%=tour.shortname%>"
                       ><%=tour.title%></a
                     >
                     <%})%>
@@ -75,12 +74,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#contactform">Contact</a>
                 </li>
-                <li>
-                    <a onclick="swapStyleSheet('css/mystyle.css')" href="#">Blue</a>
-                  </li>
-                  <li>
-                    <a onclick="swapStyleSheet('css/colourChange.css')" href="#">Red</a>
-                  </li>
               </ul>
             </div>
           </nav>
