@@ -1,0 +1,7 @@
+{
+  "users": [{
+    "name": "Andrew Lee",
+    "shortname" : "Andrew_Lee",
+    "favouriteTours" : ["flinders_street", "ngv", "grafitti_art"]
+  }]
+}

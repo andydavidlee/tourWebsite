@@ -6,6 +6,7 @@ module.exports = {
         data: {
             tours: path.join(__dirname, 'data/tours.json'),
             feedback: path.join(__dirname, 'data/feedback.json'),
+            users: path.join(__dirname, 'data/users.json'),
             contact: path.join(__dirname, 'data/contact.json')
         }
 
@@ -15,6 +16,7 @@ module.exports = {
         data: {
             speakers: path.join(__dirname, 'data/tours.json'),
             feedback: path.join(__dirname, 'data/feedback.json'),
+            users: path.join(__dirname, 'data/users.json'),
             contact: path.join(__dirname, 'data/contact.json')
         }
     }

@@ -10,11 +10,14 @@ const bodyParser = require('body-parser');
 const FeedbackService = require('./services/feedbackservice');
 const TourService = require('./services/tourservices');
 const ContactService = require('./services/contactservice');
+const PersonaliseService = require('./services/PersonaliseService'); // Loads the personalise services module
 
 // creating the routes to the json files
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
 const contactService = new ContactService('./data/contact.json');
+const personaliseService = new PersonaliseService('./data/users.json'); // Creates a new services and passes in the url for the data from the config
+
 
 // creating a path to the routes folder
 const routes = require('./routes');
@@ -48,6 +51,7 @@ app.use(async (request, response, next) => {
 app.use('/', routes({
     feedbackService,
     tourService,
+    personaliseService,
     contactService,
 }));
 
