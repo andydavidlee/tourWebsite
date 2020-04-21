@@ -12,6 +12,7 @@ module.exports = params => {
     const {tourService} = params;
     const {feedbackService} = params;
 
+    // Requesting infomation from both the tours and feedback routes pages in order to render the index page.
     router.get('/', async(request, response, next) => {
         try  {
             const topTours = await tourService.getTopTours();

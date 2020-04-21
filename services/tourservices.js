@@ -1,10 +1,12 @@
+// Pulls required data from the tours.json file and organises it for rendering on pages.
+
 const fs = require("fs");
 const util = require("util");
 
 
 const readFile = util.promisify(fs.readFile);
 
-
+// Creates a class
 class TourService {
   /**
    * Constructor
@@ -27,7 +29,7 @@ class TourService {
   }
 
   /**
-   * Get speaker information provided a shortname
+   * Get tour information provided a shortname
    * @param {*} shortname
    */
   async getTour(shortname) {
@@ -45,7 +47,7 @@ class TourService {
   }
 
   /**
-   * Returns a list of speakers with only the basic information
+   * Returns a list of tours with only the basic information
    */
   async getListShort() {
     const data = await this.getData();
@@ -58,7 +60,7 @@ class TourService {
   }
 
   /**
-   * Get a list of speakers
+   * Get a list of tours
    */
   async getList() {
     const data = await this.getData();
@@ -71,9 +73,12 @@ class TourService {
       };
     });
   }
+
+// Gets a list of tours summary information as well as the imagery for the cards on the index page.
+
   async getTopTours() {
     const data = await this.getData();
-    let topTours = data.map(tour => {
+    const topTours = data.map(tour => {
       return {
         title: tour.title,
         shortname: tour.shortname,
@@ -86,7 +91,7 @@ class TourService {
 
 
   /**
-   * Fetches speakers data from the JSON file provided to the constructor
+   * Fetches tours data from the JSON file provided to the constructor
    */
   async getData() {
     const data = await readFile(this.datafile, "utf8");
@@ -94,8 +99,8 @@ class TourService {
   }
 
   /**
-   * Get all artwork of a given speaker
-   * @param {*} shortname The speakers short name
+   * Get all artwork of a given tour
+   * @param {*} shortname The tours short name
    */
   async getArtworkForTour(shortname) {
     const data = await this.getData();

@@ -39,6 +39,7 @@
             <div class="bg-white my">
                 <div id="pagecards">
                         <div class="card-deck text-center py-5">
+                             <%#this loops the information from the tourservices file which further pulls information from the tours.json file.%>
                             <% topTours.forEach(function(tour) {%>
                             <div class="card border-0 col-mb-3">
                                 <img class="card-img-top rounded-circle" src="images/<%-tour.card%>" alt="Photo of <%-tour.title%>">

@@ -1,3 +1,5 @@
+// Routes infomation from the services file to render onto the index.ejs file.
+
 const express = require('express');
 
 const router = express.Router();
@@ -12,9 +14,8 @@ const router = express.Router();
 
 
  router.post('/', async(req, res, next) => {
-        
+     // requesting information from the feedback services file in order to render the info pages.
   try {
-      console.log(req.body)
       const feedback = await feedbackService.getList(); 
       const topTours = await tourService.getList();
 
@@ -34,10 +35,10 @@ const router = express.Router();
               topTours,
           });
       }
-     
+     // adds information to the feedback.json file.
       await feedbackService.addEntry(name, title, message);
 
-     
+     // render the index.ejs page if feedback infomation was successfully sent otherwise error page will appear.
       return res.redirect('/?success=true')
   }catch(err){
       return next(err);

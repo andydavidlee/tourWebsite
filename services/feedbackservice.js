@@ -1,3 +1,4 @@
+// Pulls required data from the feedback.json file and organises it for rendering on pages.
 const fs = require('fs');
 const util = require('util');
 
@@ -10,7 +11,7 @@ const writeFile = util.promisify(fs.writeFile);
 class FeedbackService {
   /**
    * Constructor
-   * @param {*} datafile Path to a JSOn file that contains the feedback data
+   * @param {*} datafile Path to a JSON file that contains the feedback data
    */
   constructor(datafile) {
     this.datafile = datafile;

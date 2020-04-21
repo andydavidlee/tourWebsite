@@ -1,22 +1,27 @@
+
+
 const express = require('express');
 const path = require('path');
 // const createError = require('http-errors');
 
 const bodyParser = require('body-parser');
 
+// creating the routes to the services pages
 const FeedbackService = require('./services/feedbackservice');
 const TourService = require('./services/tourservices');
 const ContactService = require('./services/contactservice');
 
-
+// creating the routes to the json files
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
 const contactService = new ContactService('./data/contact.json');
 
+// creating a path to the routes folder
 const routes = require('./routes');
 
 const app = express();
 
+// telling the server what port to launch on
 const port = 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -39,12 +44,14 @@ app.use(async (request, response, next) => {
     }
 });
 
+// telling the server to use the service files.
 app.use('/', routes({
     feedbackService,
     tourService,
     contactService,
 }));
 
+// if there is an error, to repond with the following
 // app.use((request, response, next) => {
    // return next(createError(404, 'File not found!'));
 // });
