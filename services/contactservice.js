@@ -17,14 +17,14 @@ class ContactService {
 
   /**
    * Add a new feedback item
-   * @param {*} fbFirstName First name of the user
-   * @param {*} fbLastName Last name of the user
-   * @param {*} fbEmail Email of the user
-   * @param {*} fbMessage The feedback message
+   * @param {*} firstName First name of the user
+   * @param {*} lastName Last name of the user
+   * @param {*} email Email of the user
+   * @param {*} message The feedback message
    */
-  async addEntry(fbFirstName, fbLastName, fbEmail, fbMessage) {
+  async addEntry(firstName, lastName, email, message) {
     const data = (await this.getData()) || [];
-    data.unshift({ fbFirstName, fbLastName, fbEmail, fbMessage });
+    data.unshift({ firstName, lastName, email, message });
     return writeFile(this.datafile, JSON.stringify(data));
   }
 }

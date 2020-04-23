@@ -1,38 +1,40 @@
-const express = require("express");
+// Routes infomation from the services file to render onto the index.ejs file.
+
+const express = require('express');
 
 const router = express.Router();
-const { validationResult, matchedData } = require("express-validator");
 
-router.get("/", (req, res) => {
-  res.render("index");
-});
 
-router.get("layout", (req, res) => {
-  res.render("/", {
-    data: {},
-    errors: {}
-  });
-});
 
-router.post(
-  "/",  async (req, res) => {
+ module.exports = (params) => {
 
-    console.log(req.body);
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("index", {
-        data: req.body,
-        errors: errors.mapped()
-      });
-    }
+  const {feedbackService} = params;
+  const {tourService} = params;
 
-    const data = matchedData(req);
-    console.log("Sanitized: ", data);
-    // Homework: send sanitized data in an email or persist in a db
 
-    req.flash("success", "Thanks for the message! I‘ll be in touch :)");
-    res.redirect("/");
+
+  router.post('/contact', async(req, res, next) => {
+    try {
+      const feedback = await feedbackService.getList(); 
+      const topTours = await tourService.getList();
+      const { firstName, lastName, email, message } = req.body
+      const user = req({ firstName, lastName, email, message })
+      const ret = await user.save()
+      res.json(ret)
+      
+      if(!firstName || !lastName || !email || !message){
+          return res.render('layout', 
+          {
+            pageTitle: 'Welcome', template: 'index', feedback, topTours,
+          });
+      }
+
+     // render the index.ejs page if feedback infomation was successfully sent otherwise error page will appear.
+      return res.redirect('/?success=true')
+  }catch(err){
+      return next(err);
   }
-);
+});
 
-module.exports = router;
+return router; 
+};

@@ -2,6 +2,24 @@
   "users": [{
     "name": "Andrew Lee",
     "shortname" : "Andrew_Lee",
-    "favouriteTours" : ["flinders_street", "ngv", "grafitti_art"]
+    "favouriteTours" : [ 
+    { 
+      "title": "GRAFITTI ART!",
+      "shortname": "grafitti_art",
+      "summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+      "card": [ "StreetArtCard.jpg" ] 
+    },
+    { 
+      "title": "PARKLANDS",
+      "shortname": "parklands",
+      "summary":
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+      "card": [ "FlindersCard.jpg" ] },
+    { 
+      "title": "NGV",
+      "shortname": "ngv",
+      "summary":
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum efficitur auctor.",
+      "card": [ "NGVCard.jpg" ] } ]
   }]
 }

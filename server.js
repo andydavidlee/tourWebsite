@@ -6,17 +6,21 @@ const path = require('path');
 
 const bodyParser = require('body-parser');
 
+const multer = require('multer');
+
+const upload = multer();
+
 // creating the routes to the services pages
 const FeedbackService = require('./services/feedbackservice');
 const TourService = require('./services/tourservices');
-const ContactService = require('./services/contactservice');
+// const ContactService = require('./services/contactservice');
 const PersonaliseService = require('./services/PersonaliseService'); // Loads the personalise services module
 
 // creating the routes to the json files
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
-const contactService = new ContactService('./data/contact.json');
 const personaliseService = new PersonaliseService('./data/users.json'); // Creates a new services and passes in the url for the data from the config
+// const contactService = require('./data/contact.json');
 
 
 // creating a path to the routes folder
@@ -34,6 +38,7 @@ app.set('views', path.join(__dirname, './views'));
 
 app.locals.siteName = 'Tour Melbourne!';
 
+app.use(upload.array());
 app.use(express.static(path.join(__dirname, './static')));
 
 app.use(async (request, response, next) => {
@@ -52,7 +57,7 @@ app.use('/', routes({
     feedbackService,
     tourService,
     personaliseService,
-    contactService,
+    // contactService,
 }));
 
 // if there is an error, to repond with the following
