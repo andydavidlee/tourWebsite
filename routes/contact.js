@@ -13,19 +13,26 @@ const router = express.Router();
 
 
 
-  router.post('/contact', async(req, res, next) => {
+  router.post('/', async(req, res, next) => {
     try {
       const feedback = await feedbackService.getList(); 
       const topTours = await tourService.getList();
-      const { firstName, lastName, email, message } = req.body
-      const user = req({ firstName, lastName, email, message })
-      const ret = await user.save()
-      res.json(ret)
+
+      const firstName = req.body.firstName.trim();
+      const lastName = req.body.lastName.trim();
+      const email = req.body.email.trim();
+      const message = req.body.message.trim();
       
       if(!firstName || !lastName || !email || !message){
           return res.render('layout', 
           {
-            pageTitle: 'Welcome', template: 'index', feedback, topTours,
+            pageTitle: 'Welcome', template: 'index', 
+            feedback, 
+            topTours,
+            firstName,
+            lastName,
+            email,
+            message,
           });
       }
 

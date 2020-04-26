@@ -7,7 +7,7 @@ const router = express.Router();
 
 module.exports = (params) => {
 
-    const {tourService} = params;
+    const {tourService} = params; // Deconstructs tourService from param
 
     // requesting information from the services file in order to render the info pages.
 router.get('/:shortname', async(request, response, next) => {

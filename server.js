@@ -17,10 +17,11 @@ const TourService = require('./services/tourservices');
 const PersonaliseService = require('./services/PersonaliseService'); // Loads the personalise services module
 
 // creating the routes to the json files
+const contactService = require('./data/contact.json');
+
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
-const personaliseService = new PersonaliseService('./data/users.json'); // Creates a new services and passes in the url for the data from the config
-// const contactService = require('./data/contact.json');
+const personaliseService = new PersonaliseService('./data/users.json');
 
 
 // creating a path to the routes folder
@@ -57,7 +58,7 @@ app.use('/', routes({
     feedbackService,
     tourService,
     personaliseService,
-    // contactService,
+    contactService,
 }));
 
 // if there is an error, to repond with the following
