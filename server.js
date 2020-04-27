@@ -2,7 +2,7 @@
 
 const express = require('express');
 const path = require('path');
-// const createError = require('http-errors');
+const createError = require('http-errors');
 
 const bodyParser = require('body-parser');
 
@@ -13,12 +13,12 @@ const upload = multer();
 // creating the routes to the services pages
 const FeedbackService = require('./services/feedbackservice');
 const TourService = require('./services/tourservices');
-// const ContactService = require('./services/contactservice');
+const ContactService = require('./services/contactService');
 const PersonaliseService = require('./services/PersonaliseService'); // Loads the personalise services module
 
 // creating the routes to the json files
-const contactService = require('./data/contact.json');
 
+const contactService = new ContactService('./data/contact.json');
 const feedbackService = new FeedbackService('./data/feedback.json');
 const tourService = new TourService('./data/tours.json');
 const personaliseService = new PersonaliseService('./data/users.json');
@@ -62,17 +62,17 @@ app.use('/', routes({
 }));
 
 // if there is an error, to repond with the following
-// app.use((request, response, next) => {
-   // return next(createError(404, 'File not found!'));
-// });
+app.use((request, response, next) => {
+return next(createError(404, 'File not found!'));
+});
 
-// app.use((err, request, response, next) => {
-   // response.locals.message = err.message;
-   // const status = err.status || 500;
-   // response.locals.status = status;
-   // response.status(status);
-   // response.render('error');
-// });
+app.use((err, request, response, next) => {
+   response.locals.message = err.message;
+   const status = err.status || 500;
+   response.locals.status = status;
+   response.status(status);
+   response.render('error');
+});
 
 app.listen(port, () => {
     console.log(`Express server listening on port ${port}!`);
