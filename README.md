@@ -1,2 +1,2 @@
 # tourMelbourne
-Project learning Node.js and EJS
+Project learning Node.js with Expressjs and EJS
